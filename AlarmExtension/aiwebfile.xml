@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiwebfile version="1.0">
+  <components>
+    <component type="extension" helper="false">
+      <name>AlarmExtension</name>
+      <version>1</version>
+      <classification>0</classification>
+      <icon>images/ic_alarm.png</icon>
+      <android|minSdk>10</android|minSdk>
+      <assets/>
+      <classes>
+        <class name="com.arthur.alarm.AlarmExtension"/>
+        <class name="com.arthur.alarm.AlarmReceiver"/>
+      </classes>
+    </component>
+  </components>
+</aiwebfile>

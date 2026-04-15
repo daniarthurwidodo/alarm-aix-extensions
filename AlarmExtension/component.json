@@ -1,0 +1,56 @@
+{
+  "type": "extension",
+  "components": [
+    {
+      "type": "com.arthur.alarm.AlarmExtension",
+      "category": "EXTENSION",
+      "version": 1,
+      "nonVisible": true,
+      "name": "AlarmExtension",
+      "description": "Extension to set alarms by date and time",
+      "methods": [
+        {
+          "name": "SetAlarm",
+          "description": "Set an alarm for a specific date and time",
+          "params": [
+            { "name": "year", "type": "number" },
+            { "name": "month", "type": "number" },
+            { "name": "day", "type": "number" },
+            { "name": "hour", "type": "number" },
+            { "name": "minute", "type": "number" },
+            { "name": "message", "type": "text" }
+          ]
+        },
+        {
+          "name": "CancelAlarm",
+          "description": "Cancel all alarms",
+          "params": []
+        }
+      ],
+      "events": [
+        {
+          "name": "AlarmSet",
+          "description": "Event triggered when alarm is set successfully",
+          "params": [
+            { "name": "message", "type": "text" }
+          ]
+        },
+        {
+          "name": "AlarmError",
+          "description": "Event triggered when there is an error",
+          "params": [
+            { "name": "message", "type": "text" }
+          ]
+        },
+        {
+          "name": "AlarmCancelled",
+          "description": "Event triggered when alarm is cancelled",
+          "params": [
+            { "name": "message", "type": "text" }
+          ]
+        }
+      ],
+      "properties": []
+    }
+  ]
+}

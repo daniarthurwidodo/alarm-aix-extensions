@@ -1,0 +1,12 @@
+type: extension
+name: AlarmExtension
+versionString: 1.0
+license: Apache 2.0
+minSdk: 10
+sources:
+  - src/com/arthur/alarm/AlarmExtension.java
+  - src/com/arthur/alarm/AlarmReceiver.java
+android:
+  - code: src/com/arthur/alarm/AlarmExtension.java
+  - code: src/com/arthur/alarm/AlarmReceiver.java
+assets: []

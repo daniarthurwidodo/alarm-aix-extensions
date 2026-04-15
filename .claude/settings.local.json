@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(rm -f assets)",
+      "Bash(mkdir -p assets/images)",
+      "Bash(powershell -ExecutionPolicy Bypass -File build.ps1)"
+    ]
+  }
+}

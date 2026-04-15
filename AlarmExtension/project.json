@@ -1,0 +1,13 @@
+{
+  "name": "AlarmExtension",
+  "version": "1.0",
+  "description": "Extension to set alarms by date and time",
+  "type": "extension",
+  "author": "Arthur",
+  "license": "Apache 2.0",
+  "minSdk": "10",
+  "classes": [
+    "com.arthur.alarm.AlarmExtension",
+    "com.arthur.alarm.AlarmReceiver"
+  ]
+}

@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'com.android.application' version '8.1.0' apply false
+}
+
+group = 'com.arthur.alarm'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
