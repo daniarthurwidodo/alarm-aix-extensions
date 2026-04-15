@@ -36,9 +36,13 @@ public class AlarmReceiver extends BroadcastReceiver {
             if (ringtone != null) {
                 ringtone.play();
                 // Stop after 30 seconds
-                new android.os.Handler().postDelayed(() -> {
-                    if (ringtone != null && ringtone.isPlaying()) {
-                        ringtone.stop();
+                final Ringtone ringtoneRef = ringtone;
+                new android.os.Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (ringtoneRef != null && ringtoneRef.isPlaying()) {
+                            ringtoneRef.stop();
+                        }
                     }
                 }, 30000);
             }

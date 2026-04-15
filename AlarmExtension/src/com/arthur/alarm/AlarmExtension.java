@@ -8,7 +8,7 @@ import android.util.Log;
 import com.google.appinventor.components.annotations.*;
 import com.google.appinventor.components.common.ComponentCategory;
 import com.google.appinventor.components.runtime.*;
-import com.google.appinventor.components.runtime.util.ApiLevelUtil;
+import android.os.Build;
 
 @DesignerComponent(
     version = 1,
@@ -17,7 +17,7 @@ import com.google.appinventor.components.runtime.util.ApiLevelUtil;
     nonVisible = true,
     androidMinSdk = 10,
     iconName = "ic_alarm")
-@SimpleObject(exclude = true)
+@SimpleObject(external = true)
 public class AlarmExtension extends AndroidNonvisibleComponent implements Component {
 
     private static final String TAG = "AlarmExtension";
@@ -64,13 +64,13 @@ public class AlarmExtension extends AndroidNonvisibleComponent implements Compon
             }
 
             // Set the alarm
-            if (ApiLevelUtil.isAtLeast23(context)) {
+            if (Build.VERSION.SDK_INT >= 23) {
                 alarmManager.setExactAndAllowWhileIdle(
                     AlarmManager.RTC_WAKEUP,
                     alarmTime,
                     pendingIntent
                 );
-            } else if (ApiLevelUtil.isAtLeast19(context)) {
+            } else if (Build.VERSION.SDK_INT >= 19) {
                 alarmManager.setExact(
                     AlarmManager.RTC_WAKEUP,
                     alarmTime,

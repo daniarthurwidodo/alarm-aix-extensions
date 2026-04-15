@@ -1,5 +1,7 @@
 # Alarm Extension for MIT App Inventor
 
+![AlarmExtension in MIT App Inventor palette](assets/images/extension-palette.png)
+
 > **IMPORTANT:** This extension requires compilation before it can be imported into MIT App Inventor.
 > The `.aix` file included in this repository contains **source code** and must be built using one of the methods below.
 
@@ -133,6 +135,20 @@ public class AlarmReceiver extends BroadcastReceiver {
 1. Go to https://community.niotron.com/
 2. Use Blaze AI to create the extension
 3. Download the `.aix` file
+
+**D. Using MIT App Inventor Extension Template (Official)**
+1. Clone the template: `git clone https://github.com/mit-cml/extension-template`
+2. Copy `AlarmExtension.java` and `AlarmReceiver.java` to `extension-template/src/com/arthur/alarm/`
+3. Edit `extension-template/src/MANIFEST` to include your package (see below)
+4. Run `ant extensions` from the `extension-template` directory
+5. Find the compiled `.aix` file in `extension-template/out/`
+
+**MANIFEST entry:**
+```
+com.arthur.alarm.AlarmExtension
+```
+
+> Requires: Java 8+, Apache Ant, and the Android SDK.
 
 ## Installation (After Building)
 
